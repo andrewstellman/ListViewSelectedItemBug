@@ -2,6 +2,8 @@
 
 This is code to reproduce a bug with the .NET MAUI ListView, where the SelectedItem property retains a reference to an object even after the item has been removed or the ListView has been cleared.
 
+See .NET MAUI bug report [#16053](https://github.com/dotnet/maui/issues/16053) for more details.
+
 ![image](https://github.com/andrewstellman/ListViewSelectedItemBug/assets/7516297/1a4c83a1-241c-4680-856e-05395a12b46a)
 
 How to reproduce:
