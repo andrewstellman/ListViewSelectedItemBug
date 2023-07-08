@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewSelectedItemBug"
+             x:Class="ListViewSelectedItemBug.MainPage">
+
+    <ContentPage.Resources>
+        <local:MeasurementCollection x:Key="collection"/>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="ListView" ItemsSource="{StaticResource collection}" Margin="10" BackgroundColor="LightGray"/>
+        <Button Text="Add Random Measurement" Clicked="Add_Clicked" Grid.Row="1" Margin="10"/>
+        <Button Text="Remove Selected Item" Clicked="Remove_Clicked" Grid.Row="2" Margin="10"/>
+        <Button Text="Clear" Clicked="Clear_Clicked" Grid.Row="3" Margin="10"/>
+        <HorizontalStackLayout Grid.Row="4" Margin="10">
+            <Button Text="Get Selected Item" Clicked="GetSelectedItem_Clicked" />
+            <Label x:Name="SelectedItem" VerticalTextAlignment="Center" Margin="20,0,0,0"/>
+        </HorizontalStackLayout>
+    </Grid>
+
+</ContentPage>
